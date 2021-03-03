@@ -84,6 +84,7 @@ button:focus {
 /* GROUP STYLES */
 
 .logo-text,
+.nav-link.current,
 .nav-item:hover,
 .nav-item:focus,
 .contact-link:hover,
@@ -160,10 +161,6 @@ button:focus {
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.nav-link.current {
-  color: var(--text-blue);
-}
-
 .header-nav {
   display: flex;
 }
@@ -187,7 +184,7 @@ button:focus {
   font-style: normal;
   font-weight: bold;
   font-size: 26px;
-  line-height: 1.19;
+  line-height: 1.192;
   letter-spacing: 0.03em;
 }
 
@@ -196,7 +193,7 @@ button:focus {
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
-  line-height: 1.14;
+  line-height: 1.142;
   letter-spacing: 0.02em;
   align-items: center;
 }
@@ -218,7 +215,7 @@ button:focus {
 .contact-icon {
   width: 16px;
   height: 16px;
-  fill: #757575;
+  fill: var(--text-grey);
   margin-right: 10px;
 }
 
@@ -244,13 +241,13 @@ button:focus {
   font-style: normal;
   font-weight: 900;
   font-size: 44px;
-  line-height: 1.36;
+  line-height: 1.363;
   letter-spacing: 0.06em;
   text-transform: uppercase;
 
-  text-align: center;
-  padding-top: 213px;
   width: 696px;
+  text-align: center;
+  padding-top: 200px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -258,7 +255,6 @@ button:focus {
 .hero-btn:hover,
 .hero-btn:focus {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border: black;
 }
 
 .hero-btn {
@@ -266,19 +262,17 @@ button:focus {
   font-style: normal;
   font-weight: bold;
   font-size: 16px;
-  line-height: 1.88;
+  line-height: 1.875;
   letter-spacing: 0.06em;
 
   margin-top: 30px;
-  margin-bottom: 187px;
+  margin-bottom: 200px;
   margin-left: auto;
   margin-right: auto;
   padding: 10px 32px;
 
   border-radius: 4px;
   border: transparent;
-
-  /* cursor: pointer; */
 }
 
 /* FEATURES */
@@ -319,7 +313,7 @@ button:focus {
   font-style: normal;
   font-weight: bold;
   font-size: 14px;
-  line-height: 1.14;
+  line-height: 1.142;
   letter-spacing: 0.03em;
   text-transform: uppercase;
 }
@@ -332,7 +326,7 @@ button:focus {
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
-  line-height: 1.71;
+  line-height: 1.714;
   letter-spacing: 0.03em;
 
   margin-top: 10px;
@@ -397,7 +391,7 @@ button:focus {
   font-style: normal;
   font-weight: bold;
   font-size: 36px;
-  line-height: 1.17;
+  line-height: 1.166;
   text-align: center;
   letter-spacing: 0.03em;
 }
@@ -417,7 +411,7 @@ button:focus {
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
-  line-height: 1.19;
+  line-height: 1.187;
 
   letter-spacing: 0.03em;
   text-align: center;
@@ -491,18 +485,16 @@ button:focus {
   height: 90px;
   border: 1px solid var(--icon-grey);
   border-radius: 4px;
+  justify-content: center;
+  align-items: center;
+  color: var(--icon-grey);
 }
 
 .client-link:hover,
 .client-link:focus,
-.client-icon:hover,
-.client-icon:focus {
-  fill: var(--text-blue);
+.client-icon:hover {
+  color: var(--text-blue);
   border-color: var(--text-blue);
-}
-
-.client-icon {
-  fill: var(--icon-grey);
 }
 
 /* FOOTER */
@@ -533,7 +525,7 @@ button:focus {
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
-  line-height: 1.71;
+  line-height: 1.714;
   letter-spacing: 0.03em;
 }
 
@@ -564,11 +556,10 @@ button:focus {
 }
 
 /* PROJECTS */
+
 .project-filter {
   display: flex;
   padding-top: 94px;
-
-  /* padding-bottom: 20px; */
   justify-content: center;
 }
 
@@ -585,7 +576,7 @@ button:focus {
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
-  line-height: 1.63;
+  line-height: 1.625;
   text-align: center;
   letter-spacing: 0.03em;
   border: transparent;
@@ -602,13 +593,17 @@ button:focus {
 }
 
 .project-list {
-  /* outline: 1px solid red; */
-
   display: flex;
   flex-wrap: wrap;
   margin-top: 20px;
   margin-right: -30px;
   padding-bottom: 94px;
+}
+
+.project-item {
+  flex-basis: calc(100% / 3 - 30px);
+  margin-top: 30px;
+  margin-right: 30px;
 }
 
 /* .thumb {
@@ -623,14 +618,6 @@ button:focus {
 
   object-fit: cover;
 } */
-
-.project-item {
-  /* outline: 1px solid red; */
-
-  flex-basis: calc(100% / 3 - 30px);
-  margin-top: 30px;
-  margin-right: 30px;
-}
 
 .project-item:hover,
 .project-item:focus {
@@ -650,8 +637,6 @@ button:focus {
 }
 
 .project-name {
-  /* outline: 1px solid teal; */
-
   font-style: normal;
   font-weight: bold;
   font-size: 18px;
@@ -660,13 +645,32 @@ button:focus {
 }
 
 .project-text {
-  /* outline: 1px solid teal; */
-
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
-  line-height: 1.88;
+  line-height: 1.875;
   letter-spacing: 0.03em;
 
   margin-top: 4px;
+}
+
+/* СТРАНИЦА В РАЗРАБОТКЕ */
+
+.contacts {
+  height: 700px;
+  background-color: darksalmon;
+}
+
+.contacts-title {
+  font-style: normal;
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.363;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-align: center;
+  color: #ffffff;
+
+  padding-top: 100px;
+  margin: 0 auto;
 }

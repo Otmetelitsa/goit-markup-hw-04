@@ -103,7 +103,7 @@ button:focus {
 .hero-title,
 .hero-btn,
 .footer,
-.footer-contacts,
+.footer-contact,
 .footer-logo,
 .project-btn:hover,
 .project-btn:focus {
@@ -112,13 +112,17 @@ button:focus {
 
 .hero,
 .footer,
-.footer-contacts,
+.footer-contact,
 .footer-logo,
 .footer-link {
   background-color: var(--back-black-light);
 }
 
 .hero-btn,
+.team-social-link:hover,
+.team-social-link:focus,
+.footer-social-link:hover,
+.footer-social-link:focus,
 .project-btn:hover,
 .project-btn:focus {
   background-color: var(--text-blue);
@@ -188,7 +192,7 @@ button:focus {
 }
 
 .header-nav,
-.header-contacts {
+.header-contact {
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
@@ -201,7 +205,7 @@ button:focus {
   padding: 32px 0;
 }
 
-.header-contacts {
+.header-contact {
   display: flex;
   margin-left: auto;
 }
@@ -437,9 +441,8 @@ button:focus {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background: red;
   justify-content: center;
-  align-content: center;
+  align-items: center;
 }
 
 .team-icon,
@@ -447,11 +450,20 @@ button:focus {
   display: flex;
   width: 20px;
   height: 20px;
-  /* fill: var(--text-white); */
 }
 
 .team-icon {
   fill: var(--icon-grey);
+}
+
+.team-icon:hover,
+.team-icon:focus {
+  fill: currentColor;
+}
+
+.team-social-link:focus,
+.team-social-link:hover {
+  color: var(--text-white);
 }
 
 /* CLIENTS */
@@ -469,22 +481,21 @@ button:focus {
   align-items: center;
 }
 
-.client-list {
-  display: flex;
-
-  border: 1px solid var(--icon-grey);
-  border-radius: 4px;
+.client-list:not(:last-child) {
+  margin-right: 30px;
 }
 
 .client-link {
+  display: flex;
   width: 170px;
   height: 90px;
-  justify-content: center;
-  align-items: center;
+  border: 1px solid var(--icon-grey);
+  border-radius: 4px;
+  padding-top: 20px;
 }
 
-.client-list:hover,
-.client-list:focus,
+.client-link:hover,
+.client-link:focus,
 .client-icon:hover,
 .client-icon:focus {
   fill: var(--text-blue);
@@ -493,10 +504,6 @@ button:focus {
 
 .client-icon {
   fill: var(--icon-grey);
-}
-
-.client-list:not(:last-child) {
-  margin-right: 30px;
 }
 
 /* FOOTER */
@@ -543,10 +550,6 @@ button:focus {
   margin-right: 10px;
 }
 
-/* .footer-social-item {
-  background: rgba(255, 255, 255, 0.1);
-} */
-
 .footer-social-link {
   display: flex;
   width: 44px;
@@ -554,11 +557,11 @@ button:focus {
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.1);
   justify-content: center;
-  align-content: center;
+  align-items: center;
 }
 
 .footer-icon {
-  fill: var(--text-white);
+  fill: currentColor;
 }
 
 /* PROJECTS */

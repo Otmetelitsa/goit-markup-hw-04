@@ -479,7 +479,6 @@ button:focus {
   display: flex;
   padding-top: 50px;
   justify-content: center;
-  align-items: center;
 }
 
 .client-list:not(:last-child) {
@@ -492,7 +491,8 @@ button:focus {
   height: 90px;
   border: 1px solid var(--icon-grey);
   border-radius: 4px;
-  padding-top: 20px;
+  justify-content: center;
+  align-items: center;
 }
 
 .client-link:hover,
@@ -504,6 +504,9 @@ button:focus {
 }
 
 .client-icon {
+  display: flex;
+  object-fit: fill;
+  bject-position: 50% 50%;
   fill: var(--icon-grey);
 }
 

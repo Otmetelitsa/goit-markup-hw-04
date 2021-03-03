@@ -13,6 +13,7 @@
   --back-grey-btn: #f5f4fa;
   --border: #eeeeee;
 
+  --icon-grey: #afb1b8;
   --set-gap: 30px;
 }
 
@@ -420,29 +421,37 @@ button:focus {
   margin-bottom: 16px;
 }
 
-.social-list {
+.team-social-list {
   display: flex;
   margin-left: 32px;
   margin-right: 32px;
   margin-bottom: 30px;
 }
 
-/* .social-item,
-.footer-social-item {
+.team-social-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.team-social-link {
+  display: flex;
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  cursor: pointer;
-} */
-
-.social-item:not(:last-child) {
-  margin-right: 10px;
+  background: red;
+  justify-content: center;
+  align-content: center;
 }
 
 .team-icon,
 .footer-icon {
+  display: flex;
   width: 20px;
   height: 20px;
+  /* fill: var(--text-white); */
+}
+
+.team-icon {
+  fill: var(--icon-grey);
 }
 
 /* CLIENTS */
@@ -463,9 +472,10 @@ button:focus {
 .client-list {
   display: flex;
 
-  border: 1px solid #afb1b8;
+  border: 1px solid var(--icon-grey);
   border-radius: 4px;
 }
+
 .client-link {
   width: 170px;
   height: 90px;
@@ -473,19 +483,20 @@ button:focus {
   align-items: center;
 }
 
-.client-link:hover,
-.client-link:focus,
+.client-list:hover,
+.client-list:focus,
 .client-icon:hover,
 .client-icon:focus {
   fill: var(--text-blue);
   border-color: var(--text-blue);
 }
 
-.client-list:not(:last-child) {
-  margin-right: 30px;
+.client-icon {
+  fill: var(--icon-grey);
 }
 
-.client-icon {
+.client-list:not(:last-child) {
+  margin-right: 30px;
 }
 
 /* FOOTER */
@@ -547,8 +558,6 @@ button:focus {
 }
 
 .footer-icon {
-  top: 22px;
-  left: 22px;
   fill: var(--text-white);
 }
 

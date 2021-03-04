@@ -226,8 +226,6 @@ button:focus {
 /* HERO */
 
 .hero {
-  height: 600px;
-  margin: 0 auto;
   background-image: linear-gradient(
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
@@ -235,6 +233,13 @@ button:focus {
     url(../images/hero.jpg);
   background-position: center;
   background-repeat: no-repeat;
+}
+
+.hero .conteiner {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding-top: 200px;
+  padding-bottom: 200px;
 }
 
 .hero-title {
@@ -247,7 +252,6 @@ button:focus {
 
   width: 696px;
   text-align: center;
-  padding-top: 200px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -266,7 +270,6 @@ button:focus {
   letter-spacing: 0.06em;
 
   margin-top: 30px;
-  margin-bottom: 200px;
   margin-left: auto;
   margin-right: auto;
   padding: 10px 32px;
@@ -287,8 +290,6 @@ button:focus {
 }
 
 .features-item {
-  width: 270px;
-
   flex-basis: calc(100% / 4 - 30px);
   margin-left: 30px;
 }
@@ -344,10 +345,6 @@ button:focus {
   margin-left: -30px;
 }
 
-.occupation-list img {
-  width: 370px;
-}
-
 .occupation-img {
   flex-basis: calc(100% / 4 - 30px);
   margin-top: 50px;
@@ -363,26 +360,39 @@ button:focus {
   padding: 94px 0;
 }
 
-.team img {
-  width: 270px;
-}
-
 .team-list {
   display: flex;
   flex-wrap: wrap;
-  margin-right: -30px;
+  margin-left: -30px;
+}
+
+.team-item .thumb {
+  height: 260px;
+  width: 270px;
+}
+
+.team-item .thumb > img {
+  display: block;
+  height: 100%;
+  width: 100%;
+
+  object-fit: cover;
 }
 
 .team-item {
   background-color: var(--text-white);
   margin-top: 50px;
-  margin-right: 30px;
+  margin-left: 30px;
 
   flex-basis: calc(100% / 4 - 30px);
 
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
+}
+
+.team-item .card {
+  padding: 30px 32px;
 }
 
 .occupation-title,
@@ -392,8 +402,9 @@ button:focus {
   font-weight: bold;
   font-size: 36px;
   line-height: 1.166;
-  text-align: center;
   letter-spacing: 0.03em;
+
+  text-align: center;
 }
 
 .team-name {
@@ -401,10 +412,10 @@ button:focus {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
-
   letter-spacing: 0.03em;
+
   text-align: center;
-  margin-top: 30px;
+  margin-bottom: 10px;
 }
 
 .team-text {
@@ -412,18 +423,14 @@ button:focus {
   font-weight: normal;
   font-size: 16px;
   line-height: 1.187;
-
   letter-spacing: 0.03em;
+
   text-align: center;
-  margin-top: 10px;
   margin-bottom: 16px;
 }
 
 .team-social-list {
   display: flex;
-  margin-left: 32px;
-  margin-right: 32px;
-  margin-bottom: 30px;
 }
 
 .team-social-item:not(:last-child) {
@@ -469,14 +476,17 @@ button:focus {
   padding: 94px 0;
 }
 
+.client-title {
+  margin-bottom: 30px;
+}
+
 .client-item {
   display: flex;
-  padding-top: 50px;
   justify-content: center;
 }
 
 .client-list:not(:last-child) {
-  margin-right: 30px;
+  margin-right: 50px;
 }
 
 .client-link {
@@ -516,6 +526,7 @@ button:focus {
 }
 
 .footer-link {
+  display: inline-block;
   color: var(--text-grey-op60);
   margin-top: 9px;
 }
@@ -596,14 +607,14 @@ button:focus {
   display: flex;
   flex-wrap: wrap;
   margin-top: 20px;
-  margin-right: -30px;
+  margin-left: -30px;
   padding-bottom: 94px;
 }
 
 .project-item {
   flex-basis: calc(100% / 3 - 30px);
   margin-top: 30px;
-  margin-right: 30px;
+  margin-left: 30px;
 }
 
 /* .thumb {
@@ -626,10 +637,8 @@ button:focus {
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-.card {
-  padding-top: 20px;
-  padding-left: 24px;
-  padding-bottom: 20px;
+.project-item .card {
+  padding: 24px 20px;
 
   border-right: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
